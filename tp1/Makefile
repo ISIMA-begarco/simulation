@@ -1,6 +1,6 @@
 #Compilateur et options de compilation
 CC=gcc
-CFLAGS=-Wall -ansi -pedantic -Wextra -g
+CFLAGS=-lm -Wall -pedantic -Wextra -g
 
 #Fichiers du projet
 SOURCES=main.c von_neuman.c congruential.c

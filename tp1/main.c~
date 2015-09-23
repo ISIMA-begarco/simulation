@@ -15,12 +15,12 @@
 #include "congruential.h"
 
 int main() {
+    int i;
     int test_amount = 50;
     long int seed = 1;
-    long int multiplier = 64525;
+    long int multiplier = 6452;
     long int increment = 10139;
-    long int modulo = 65536;
-    int i;
+    long int modulo = 0xffff;
     
     int von_neuman_seeds[5] = {4100, 1301, 1234, 100, 3141};
     

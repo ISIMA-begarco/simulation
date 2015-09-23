@@ -9,6 +9,8 @@
  *                                                                 *
  *******************************************************************/
 
+#include <math.h>
+
 #include "congruential.h"
  
 /*************************************************
@@ -24,8 +26,14 @@
  *  The next value from the seed                 *
  *************************************************/
 long int congruential_generator(long int seed, long int multiplier, long int increment, long int modulo) {
-    printf("%ld\n", ((multiplier * seed) + increment) % modulo);
-    return ((multiplier * seed) + increment) % modulo;
+    /*long int tmp = seed * multiplier;
+    printf("%09ld\t", tmp);
+    tmp += increment;
+    printf("%09ld\t", tmp);
+    tmp = tmp % modulo;
+    printf("%09ld\n", tmp);
+    */
+    return (multiplier * seed + increment) % modulo;
 }
 
 
@@ -49,7 +57,7 @@ void congruential_test(long int seed, long int multiplier, long int increment, l
     printf("Testing Linear Congruential generator for %d test%c\nSeed is: %ld\n", test_amount, (test_amount>1)?'s':' ' , seed);
 
     for (i = 0; i < test_amount; i += 1) {
-/*        printf("%ld\n", current);*/
+        printf("%ld\n", current);
         current = congruential_generator(current, multiplier, increment, modulo);
     }
 }
