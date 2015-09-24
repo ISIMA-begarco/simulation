@@ -18,7 +18,7 @@
 int main() {
     int i;
     int print_amount = 100;
-    int test_amount = 100000;
+    int test_amount = 10000000;
     int seed = 1;
     int multiplier = 214013;
     int increment = 2531011;
@@ -32,6 +32,7 @@ int main() {
     }
     
     congruential_print(seed, multiplier, increment, modulo, print_amount);
+    printf("\n\n------------------------------------------------\n\n");
     congruential_test(seed, multiplier, increment, modulo, test_amount);
     
     return EXIT_SUCCESS;

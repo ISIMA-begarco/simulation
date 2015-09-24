@@ -12,7 +12,8 @@
 #define CONGRUENTIAL_H
 
 #include <stdio.h>
-#include <stdlib.h>
+
+int congruential_generator(int, int, int, int);
 
 void congruential_print(int, int, int, int, int);
 void congruential_test(int, int, int, int, int);

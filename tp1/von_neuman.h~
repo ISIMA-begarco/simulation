@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 
+int congruential_generator(int, int, int, int);
 
 void von_neuman_print(int, int);
 

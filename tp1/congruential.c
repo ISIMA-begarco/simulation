@@ -17,10 +17,10 @@
  *        congruential_generator                 *
  *                                               *
  * PARAMETERS:                                   *
- *  int seed: value to proceed to next int  *
- *  int multiplier: used in formula         *
- *  int increment: ued in formula           *
- *  int modulo: restrain the random numbers *
+ *  int seed: value to proceed to next int       *
+ *  int multiplier: used in formula              *
+ *  int increment: ued in formula                *
+ *  int modulo: restrain the random numbers      *
  *                                               *
  * RETURN:                                       *
  *  The next value from the seed                 *
@@ -32,13 +32,13 @@ int congruential_generator(int seed, int multiplier, int increment, int modulo) 
 
 
 /*************************************************
- *            von_neuman_test                    *
+ *            congruential_print                 *
  *                                               *
  * PARAMETERS:                                   *
  *  int seed: value to proceed to next int       *
- *  int multiplier: used in formula         *
- *  int increment: ued in formula           *
- *  int modulo: restrain the random numbers *
+ *  int multiplier: used in formula              *
+ *  int increment: ued in formula                *
+ *  int modulo: restrain the random numbers      *
  *  int test_amount: number of int to evaluate   *
  *                                               *
  * RETURN:                                       *
@@ -55,6 +55,20 @@ void congruential_print(int seed, int multiplier, int increment, int modulo, int
     }
 }
 
+/*************************************************
+ *            congruential_test                  *
+ *                                               *
+ * PARAMETERS:                                   *
+ *  int seed: value to proceed to next int       *
+ *  int multiplier: used in formula              *
+ *  int increment: ued in formula                *
+ *  int modulo: restrain the random numbers      *
+ *  int test_amount: number of int to evaluate   *
+ *                                               *
+ * RETURN:                                       *
+ *  Print numbers repartition in 10 equals       *
+ *  interals of [0, 1]                           *
+ *************************************************/
 void congruential_test(int seed, int multiplier, int increment, int modulo, int test_amount) {
     int i;
     int repartition[10] = {0};

@@ -32,6 +32,7 @@ int main() {
     }
     
     congruential_print(seed, multiplier, increment, modulo, print_amount);
+    printf("\n\n------------------------------------------------\n\n");
     congruential_test(seed, multiplier, increment, modulo, test_amount);
     
     return EXIT_SUCCESS;
