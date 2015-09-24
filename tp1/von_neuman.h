@@ -14,6 +14,6 @@
 #include <stdio.h>
 
 
-void von_neuman_test(int, int);
+void von_neuman_print(int, int);
 
 #endif

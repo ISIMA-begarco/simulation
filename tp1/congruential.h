@@ -12,7 +12,9 @@
 #define CONGRUENTIAL_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void congruential_test(long int, long int, long int, long int, int);
+void congruential_print(int, int, int, int, int);
+void congruential_test(int, int, int, int, int);
 
 #endif

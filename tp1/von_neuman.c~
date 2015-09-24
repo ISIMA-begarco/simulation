@@ -35,13 +35,13 @@ int von_neuman_generator(int seed) {
  * RETURN:                                       *
  *  Print random numbers                         *
  *************************************************/
-void von_neuman_test(int seed, int test_amount) {
+void von_neuman_print(int seed, int test_amount) {
     int i, current = seed;
 
     printf("Testing Von Neuman generator for %d test%c\nSeed is: %d\n", test_amount, (test_amount>1)?'s':' ' , seed);
 
     for (i = 0; i < test_amount; i += 1) {
-        printf("%d\n", current);
+        printf("%04d\n", current);
         current = von_neuman_generator(current);
     }
 }

@@ -10,25 +10,28 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "von_neuman.h"
 #include "congruential.h"
 
 int main() {
     int i;
-    int test_amount = 50;
-    long int seed = 1;
-    long int multiplier = 6452;
-    long int increment = 10139;
-    long int modulo = 0xffff;
-    
+    int print_amount = 100;
+    int test_amount = 100000;
+    int seed = 1;
+    int multiplier = 214013;
+    int increment = 2531011;
+    int modulo = 65535; /*2147483647;  2^32 - 1 */
+
     int von_neuman_seeds[5] = {4100, 1301, 1234, 100, 3141};
-    
+
     for (i = 0; i < 5; i += 1) {
-        von_neuman_test(von_neuman_seeds[i], test_amount);
+        von_neuman_print(von_neuman_seeds[i], print_amount);
         printf("------------------------------------------------\n\n");
     }
     
+    congruential_print(seed, multiplier, increment, modulo, print_amount);
     congruential_test(seed, multiplier, increment, modulo, test_amount);
     
     return EXIT_SUCCESS;
