@@ -1,0 +1,12 @@
+---- Spefications SMA ----
+
+Theme :
+- Héros et villains (capture de vilains, morts de héros)
+
+On va disposer de 3 catégories :
+
+Les héros
+
+Les vilains
+
+Les humains
